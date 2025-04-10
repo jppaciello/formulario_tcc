@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Segurança SaaS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Avaliação de Segurança e Privacidade para Soluções SaaS</h2>
+        <form id="securityForm">
+            <label for="companyName">Nome da Empresa:</label>
+            <input type="text" id="companyName" required>
+
+            <label for="cloudUsage" aria-placeholder="Selecione">Sua empresa já utiliza alguma solução em nuvem?</label>
+            <select id="cloudUsage" required>
+                <option value="" disabled selected hidden>Escolha uma opção</option>
+                <option value="total">Sim, totalmente</option>
+                <option value="parcial">Sim, parcialmente</option>
+                <option value="nao">Não</option>
+            </select>            
+
+            <label>A empresa possui uma política formal de segurança da informação?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="securityPolicy" value="sim" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="securityPolicy" value="nao">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>A empresa utiliza autenticação multifator (MFA)?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="mfa" value="sim" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="mfa" value="nao">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>São realizados backups regulares dos dados?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="backup" value="diario" required>
+                    <span>Diariamente</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="backup" value="semanal">
+                    <span>Semanalmente</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="backup" value="nao">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
