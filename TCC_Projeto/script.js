@@ -27,18 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (score >= 7) {
             nivel = "Preparada";
             cor = "green";
-            impacto = "A empresa está pronta para adotar soluções SaaS com segurança. As práticas atuais indicam uma cultura madura em proteção de dados, o que minimiza riscos e favorece a escalabilidade.";
-            impactoFinanceiro = "Baixo impacto financeiro. A empresa provavelmente já investiu em ferramentas, políticas e treinamentos. A economia virá da redução de custos com infraestrutura física, manutenção e suporte.";
+            impacto = "Sua empresa demonstra uma base sólida de boas práticas em segurança digital e está bem posicionada para aproveitar os benefícios das soluções SaaS.";
+            impactoFinanceiro = "Impacto financeiro mínimo. A empresa já possui estrutura e cultura adequadas, o que facilita a adoção com economia de recursos em médio e longo prazo.";
         } else if (score >= 4) {
-            nivel = "Parcialmente Preparada";
+            nivel = "Em Desenvolvimento";
             cor = "orange";
-            impacto = "A empresa está em um estágio intermediário. Existem boas práticas, mas ainda há lacunas críticas que devem ser preenchidas para evitar riscos à segurança da informação.";
-            impactoFinanceiro = "Médio impacto financeiro e estrutural. Serão necessários investimentos moderados em segurança, treinamentos e revisão de processos antes da migração total para SaaS.";
+            impacto = "Sua empresa está no caminho certo! Ainda há espaço para evoluir, especialmente em aspectos como autenticação forte e políticas formais. Isso representa uma excelente oportunidade para amadurecimento tecnológico.";
+            impactoFinanceiro = "Investimentos pontuais podem acelerar a transição para SaaS com segurança. Adotar melhores práticas agora pode evitar custos maiores no futuro.";
         } else {
-            nivel = "Não Preparada";
-            cor = "red";
-            impacto = "A empresa ainda não está pronta para SaaS. Há falhas importantes em políticas, autenticação e backup, o que pode trazer riscos graves à continuidade e segurança dos dados.";
-            impactoFinanceiro = "Alto impacto financeiro e estrutural. A migração exigirá investimentos consideráveis em estrutura tecnológica, capacitação da equipe e revisão de processos internos.";
+            nivel = "Oportunidade de Crescimento";
+            cor = "gray";
+            impacto = "Sua empresa está em uma fase inicial em termos de maturidade em segurança da informação. Este é um momento ideal para planejar melhorias e construir uma base mais segura e escalável rumo ao SaaS.";
+            impactoFinanceiro = "O investimento inicial pode ser mais significativo, mas é estratégico e essencial para garantir proteção de dados, continuidade do negócio e competitividade no mercado.";
         }
 
         respostas.push({ companyName, score, nivel, cor, impacto, impactoFinanceiro });
