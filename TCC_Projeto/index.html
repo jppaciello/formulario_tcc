@@ -24,11 +24,11 @@
             <label>A empresa possui uma política formal de segurança da informação?</label>
             <div class="radio-group">
                 <div class="radio-option">
-                    <input type="radio" name="securityPolicy" value="sim" required>
+                    <input type="radio" name="securityPolicy" value="1" required>
                     <span>Sim</span>
                 </div>
                 <div class="radio-option">
-                    <input type="radio" name="securityPolicy" value="nao">
+                    <input type="radio" name="securityPolicy" value="0">
                     <span>Não</span>
                 </div>
             </div>
@@ -36,11 +36,11 @@
             <label>A empresa utiliza autenticação multifator (MFA)?</label>
             <div class="radio-group">
                 <div class="radio-option">
-                    <input type="radio" name="mfa" value="sim" required>
+                    <input type="radio" name="mfa" value="1" required>
                     <span>Sim</span>
                 </div>
                 <div class="radio-option">
-                    <input type="radio" name="mfa" value="nao">
+                    <input type="radio" name="mfa" value="0">
                     <span>Não</span>
                 </div>
             </div>
@@ -48,15 +48,193 @@
             <label>São realizados backups regulares dos dados?</label>
             <div class="radio-group">
                 <div class="radio-option">
-                    <input type="radio" name="backup" value="diario" required>
-                    <span>Diariamente</span>
+                    <input type="radio" name="backup" value="1" required>
+                    <span>Sim</span>
                 </div>
                 <div class="radio-option">
-                    <input type="radio" name="backup" value="semanal">
-                    <span>Semanalmente</span>
+                    <input type="radio" name="backup" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>A empresa realiza treinamentos periódicos sobre segurança da informação para seus colaboradores?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="training" value="1" required>
+                    <span>Sim</span>
                 </div>
                 <div class="radio-option">
-                    <input type="radio" name="backup" value="nao">
+                    <input type="radio" name="training" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>A empresa utiliza criptografia para proteção de dados sensíveis?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="encryption" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="encryption" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>A empresa realiza auditorias de segurança regularmente?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="audit" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="audit" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Há uma política de controle de acessos bem definida na empresa?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="accessControl" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="accessControl" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>A empresa possui um plano de resposta a incidentes de segurança?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="incidentPlan" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="incidentPlan" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <!-- NOVAS PERGUNTAS (11 a 20) -->
+
+            <label>A empresa monitora atividades suspeitas em tempo real?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="monitoring" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="monitoring" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Existe gestão de identidades e privilégios de usuários?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="identityManagement" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="identityManagement" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Os dados trafegam por conexões seguras (HTTPS, VPN)?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="secureConnections" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="secureConnections" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Existe controle e registro de acesso aos sistemas?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="accessLogging" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="accessLogging" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Há uma política de retenção e descarte seguro de dados?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="dataRetention" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="dataRetention" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>O ambiente SaaS está em conformidade com a LGPD?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="lgpdCompliance" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="lgpdCompliance" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Existe controle de versão e histórico de alterações nos dados?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="versionControl" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="versionControl" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>São realizados testes de segurança (como pentests)?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="pentests" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="pentests" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Existe um responsável formal por segurança da informação?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="securityOfficer" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="securityOfficer" value="0">
+                    <span>Não</span>
+                </div>
+            </div>
+
+            <label>Os dados dos clientes são armazenados separadamente por instância ou com isolamento lógico?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" name="dataIsolation" value="1" required>
+                    <span>Sim</span>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="dataIsolation" value="0">
                     <span>Não</span>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+// carregando o documento
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("securityForm");
     const resultDiv = document.getElementById("result");
@@ -6,39 +7,73 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
+        // variaveis das perguntas
         const companyName = document.getElementById("companyName").value;
         const cloudUsage = document.getElementById("cloudUsage").value;
         const securityPolicy = document.querySelector('input[name="securityPolicy"]:checked')?.value;
         const mfa = document.querySelector('input[name="mfa"]:checked')?.value;
         const backup = document.querySelector('input[name="backup"]:checked')?.value;
+        const training = document.querySelector('input[name="training"]:checked')?.value;
+        const encryption = document.querySelector('input[name="encryption"]:checked')?.value;
+        const audit = document.querySelector('input[name="audit"]:checked')?.value;
+        const accessControl = document.querySelector('input[name="accessControl"]:checked')?.value;
+        const incidentPlan = document.querySelector('input[name="incidentPlan"]:checked')?.value;
+        const dataClassification = document.querySelector('input[name="dataClassification"]:checked')?.value;
+        const accessLogging = document.querySelector('input[name="accessLogging"]:checked')?.value;
+        const passwordPolicy = document.querySelector('input[name="passwordPolicy"]:checked')?.value;
+        const vendorRisk = document.querySelector('input[name="vendorRisk"]:checked')?.value;
+        const userConsent = document.querySelector('input[name="userConsent"]:checked')?.value;
+        const dataRetention = document.querySelector('input[name="dataRetention"]:checked')?.value;
+        const mobileSecurity = document.querySelector('input[name="mobileSecurity"]:checked')?.value;
+        const vulnerabilityScan = document.querySelector('input[name="vulnerabilityScan"]:checked')?.value;
+        const physicalSecurity = document.querySelector('input[name="physicalSecurity"]:checked')?.value;
+        const dataAnonymization = document.querySelector('input[name="dataAnonymization"]:checked')?.value;
 
         let score = 0;
+
+        // Pontuação das perguntas
         if (cloudUsage === "total" || cloudUsage === "parcial") score += 2;
         if (securityPolicy === "sim") score += 2;
         if (mfa === "sim") score += 2;
         if (backup === "diario") score += 2;
         else if (backup === "semanal") score += 1;
+        if (training === "sim") score += 2;
+        if (encryption === "sim") score += 2;
+        if (audit === "sim") score += 2;
+        if (accessControl === "sim") score += 2;
+        if (incidentPlan === "sim") score += 2;
+        if (dataClassification === "sim") score += 2;
+        if (accessLogging === "sim") score += 2;
+        if (passwordPolicy === "forte") score += 2;
+        else if (passwordPolicy === "media") score += 1;
+        if (vendorRisk === "sim") score += 2;
+        if (userConsent === "sim") score += 2;
+        if (dataRetention === "sim") score += 2;
+        if (mobileSecurity === "sim") score += 2;
+        if (vulnerabilityScan === "sim") score += 2;
+        if (physicalSecurity === "sim") score += 2;
+        if (dataAnonymization === "sim") score += 2;
 
         let nivel = "";
         let cor = "";
         let impacto = "";
         let impactoFinanceiro = "";
 
-        if (score >= 7) {
+        if (score >= 36) {
             nivel = "Preparada";
             cor = "green";
-            impacto = "Sua empresa demonstra uma base sólida de boas práticas em segurança digital e está bem posicionada para aproveitar os benefícios das soluções SaaS.";
-            impactoFinanceiro = "Impacto financeiro mínimo. A empresa já possui estrutura e cultura adequadas, o que facilita a adoção com economia de recursos em médio e longo prazo.";
-        } else if (score >= 4) {
+            impacto = "Sua empresa demonstra uma base sólida de boas práticas em segurança digital.";
+            impactoFinanceiro = "Impacto financeiro mínimo. A empresa está bem posicionada para adotar soluções SaaS com eficiência.";
+        } else if (score >= 24) {
             nivel = "Em Desenvolvimento";
             cor = "orange";
-            impacto = "Sua empresa está no caminho certo! Ainda há espaço para evoluir, especialmente em aspectos como autenticação forte e políticas formais. Isso representa uma excelente oportunidade para amadurecimento tecnológico.";
-            impactoFinanceiro = "Investimentos pontuais podem acelerar a transição para SaaS com segurança. Adotar melhores práticas agora pode evitar custos maiores no futuro.";
+            impacto = "Sua empresa está no caminho certo! Porém, há áreas para melhorar.";
+            impactoFinanceiro = "Investimentos pontuais podem acelerar a adoção segura de SaaS.";
         } else {
             nivel = "Oportunidade de Crescimento";
             cor = "gray";
-            impacto = "Sua empresa está em uma fase inicial em termos de maturidade em segurança da informação. Este é um momento ideal para planejar melhorias e construir uma base mais segura e escalável rumo ao SaaS.";
-            impactoFinanceiro = "O investimento inicial pode ser mais significativo, mas é estratégico e essencial para garantir proteção de dados, continuidade do negócio e competitividade no mercado.";
+            impacto = "Sua empresa está em uma fase inicial em termos de segurança.";
+            impactoFinanceiro = "Investimentos em segurança são essenciais para garantir a proteção de dados e continuidade do negócio.";
         }
 
         respostas.push({ companyName, score, nivel, cor, impacto, impactoFinanceiro });
