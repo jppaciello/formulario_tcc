@@ -33,26 +33,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Pontuação das perguntas
         if (cloudUsage === "total" || cloudUsage === "parcial") score += 2;
-        if (securityPolicy === "sim") score += 2;
-        if (mfa === "sim") score += 2;
-        if (backup === "diario") score += 2;
-        else if (backup === "semanal") score += 1;
-        if (training === "sim") score += 2;
-        if (encryption === "sim") score += 2;
-        if (audit === "sim") score += 2;
-        if (accessControl === "sim") score += 2;
-        if (incidentPlan === "sim") score += 2;
-        if (dataClassification === "sim") score += 2;
-        if (accessLogging === "sim") score += 2;
-        if (passwordPolicy === "forte") score += 2;
-        else if (passwordPolicy === "media") score += 1;
-        if (vendorRisk === "sim") score += 2;
-        if (userConsent === "sim") score += 2;
-        if (dataRetention === "sim") score += 2;
-        if (mobileSecurity === "sim") score += 2;
-        if (vulnerabilityScan === "sim") score += 2;
-        if (physicalSecurity === "sim") score += 2;
-        if (dataAnonymization === "sim") score += 2;
+        if (securityPolicy === "1") score += 2;
+        if (mfa === "1") score += 2;
+        if (backup === "1") score += 2;
+        else if (backup === "0") score += 1;
+        if (training === "1") score += 2;
+        if (encryption === "1") score += 2;
+        if (audit === "1") score += 2;
+        if (accessControl === "1") score += 2;
+        if (incidentPlan === "1") score += 2;
+        if (dataClassification === "1") score += 2;
+        if (accessLogging === "1") score += 2;
+        if (passwordPolicy === "1") score += 2;
+        else if (passwordPolicy === "0") score += 1;
+        if (vendorRisk === "1") score += 2;
+        if (userConsent === "1") score += 2;
+        if (dataRetention === "1") score += 2;
+        if (mobileSecurity === "1") score += 2;
+        if (vulnerabilityScan === "1") score += 2;
+        if (physicalSecurity === "1") score += 2;
+        if (dataAnonymization === "1") score += 2;
 
         let nivel = "";
         let cor = "";
