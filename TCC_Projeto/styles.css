@@ -1,0 +1,272 @@
+/* ===== Reset e Variáveis ===== */
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --warning: #f8961e;
+    --danger: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f5f7fa;
+    color: #2b2d42;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ===== Container Principal ===== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ===== Estilos do Formulário ===== */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.radio-group {
+    margin: 10px 0 15px 15px;
+}
+
+.radio-option {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input {
+    margin-right: 10px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+/* ===== Dashboard de Resultados ===== */
+.dashboard-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.company-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    backdrop-filter: blur(5px);
+    margin-top: 10px;
+}
+
+.dashboard-content {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.score-card {
+    grid-column: span 2;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.gauge-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+.gauge {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(var(--success) 0% 97%, #e9ecef 97% 100%);
+    position: relative;
+}
+
+.gauge::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+}
+
+.gauge-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: 700;
+    color: #2b2d42;
+}
+
+.diagnostic-card,
+.financial-card,
+.history-card {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.diagnostic-card h2,
+.financial-card h2,
+.history-card h2 {
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-indicator {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--success), var(--primary));
+    width: 97%;
+}
+
+.history-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.history-card th,
+.history-card td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.history-card th {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.prepared {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .score-card {
+        grid-column: span 1;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+}
+
+.hidden {
+    display: none;
+}
