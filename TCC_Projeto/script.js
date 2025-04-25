@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         divResultado.innerHTML = `
             <div class="dashboard-container">
                 <div class="dashboard-header">
-                    <h1>Relatório de Segurança Digital</h1>
+                    <h1>Relatório da Avaliação</h1>
                     <div class="company-badge">${nomeEmpresa}</div>
                 </div>
                 
@@ -144,8 +144,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Função para detectar dispositivos móveis
-    function ehDispositivoMobile() {
-        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    }
 });
