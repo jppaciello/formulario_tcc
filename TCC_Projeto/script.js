@@ -40,23 +40,36 @@ document.addEventListener("DOMContentLoaded", function() {
         let nivelSeguranca = "";
         let classeNivel = "";
         let diagnostico = "";
-        let recomendacaoFinanceira = "";
+        let recomendacaoGeral = "";
 
         if (pontuacao >= 25) {
             nivelSeguranca = "Preparada";
             classeNivel = "prepared";
             diagnostico = "Sua empresa demonstra uma base sólida de boas práticas em segurança digital.";
-            recomendacaoFinanceira = "Impacto financeiro mínimo. A empresa está bem posicionada para adotar soluções SaaS com eficiência.";
+            recomendacaoGeral = `Impacto financeiro e estrutural mínimo. A empresa está bem posicionada para adotar soluções SaaS com eficiência.
+            Objetivo: Manter e evoluir a maturidade de segurança com foco em inovação e resiliência.
+            Realize auditorias periódicas e testes de penetração para avaliar continuamente a eficácia das medidas de segurança implementadas e identificar possíveis vulnerabilidades.
+            Considere a implementação de um programa de conscientização contínua para garantir que todos os colaboradores estejam atualizados sobre as melhores práticas de segurança e as ameaças emergentes.
+            Mantenha a conformidade com normas e legislações relevantes como ISO 27001, LGPD ou GDPR, atualizando processos e controles conforme necessário.`;
         } else if (pontuacao >= 15) {
             nivelSeguranca = "Em Desenvolvimento";
             classeNivel = "progress";
-            diagnostico = "Sua empresa está no caminho certo! Porém, há áreas para melhorar.";
-            recomendacaoFinanceira = "Investimentos pontuais podem acelerar a adoção segura de SaaS.";
+            diagnostico = "Sua empresa está no caminho certo! Ajustes podem ser feitos para alcançar melhores resultados.";
+            recomendacaoGeral = `Investimentos pontuais em segurança e cultura organizacional, baseada na transformação digital, podem acelerar a adoção segura de SaaS. 
+            Objetivo: Fortalecer áreas críticas para mitigar riscos e aumentar a confiança em soluções SaaS.
+            Desenvolva e aplique políticas formais de segurança, abordando controle de acesso, uso de dispositivos e gestão de dados.
+            Implemente backups regulares e automatizados, com testes periódicos de restauração para garantir a disponibilidade dos dados em caso de falhas.
+            Adote gerenciamento de identidade e autenticação multifator (MFA) para proteger o acesso aos sistemas críticos e às soluções SaaS utilizadas.`;
         } else {
             nivelSeguranca = "Oportunidade de Crescimento";
             classeNivel = "attention";
             diagnostico = "Sua empresa está em uma fase inicial em termos de segurança.";
-            recomendacaoFinanceira = "Investimentos em segurança são essenciais para garantir a proteção de dados e continuidade do negócio.";
+            recomendacaoGeral = `Investimentos em segurança são essenciais para garantir a proteção de dados e continuidade do negócio. 
+            Objetivo: Construir uma base mínima de proteção para evitar vulnerabilidades críticas.
+            Crie um inventário de ativos, listando todos os sistemas, dispositivos, dados e usuários com acesso à rede da empresa.
+            Mantenha todos os softwares atualizados, aplicando correções de segurança assim que forem disponibilizadas pelos fornecedores.
+            Elabore um plano básico de resposta a incidentes, definindo quem deve ser acionado, como conter o incidente e como registrar a ocorrência.
+            Direcione investimentos iniciais para ferramentas essenciais de proteção, como antivírus, firewall e soluções básicas de backup, mesmo que sejam de baixo custo.`;
         }
 
         // Armazenar avaliação no histórico
@@ -102,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                     
                     <div class="financial-card">
-                        <h2><i class="fas fa-chart-line"></i> Recomendações Financeiras</h2>
-                        <p>${recomendacaoFinanceira}</p>
+                        <h2><i class="fas fa-chart-line"></i> Recomendações Gerais</h2>
+                        <p>${recomendacaoGeral}</p>
                     </div>
                     
                     <div class="history-card">
@@ -140,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
             medidor.style.transition = 'background 1s ease-out';
             setTimeout(() => {
                 medidor.style.transform = 'rotate(0deg)';
-            }, 100);
+            });
         }
     });
 

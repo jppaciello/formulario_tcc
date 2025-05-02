@@ -196,6 +196,11 @@ button:hover {
     border: 1px solid #e9ecef;
 }
 
+/* Faz a history-card ocupar o espaço total */
+.history-card {
+    grid-column: span 2;
+}
+
 .diagnostic-card h2,
 .financial-card h2,
 .history-card h2 {
@@ -225,6 +230,8 @@ button:hover {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 .history-card th,
@@ -257,11 +264,12 @@ button:hover {
     .dashboard-content {
         grid-template-columns: 1fr;
     }
-    
-    .score-card {
+
+    .score-card,
+    .history-card {
         grid-column: span 1;
     }
-    
+
     h2 {
         font-size: 24px;
     }
