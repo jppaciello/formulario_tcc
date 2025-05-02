@@ -196,7 +196,6 @@ button:hover {
     border: 1px solid #e9ecef;
 }
 
-/* Faz a history-card ocupar o espaço total */
 .history-card {
     grid-column: span 2;
 }
