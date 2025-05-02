@@ -7,7 +7,7 @@ Este projeto consiste em um formulário web interativo com 40 perguntas que aval
 - Formulário com 30 perguntas objetivas (respostas "Sim", "Parcialmente", "Não").
 - Cálculo automático da pontuação baseada nas respostas.
 - Feedback final com base no desempenho do usuário.
-- Interface responsiva com HTML5, CSS3 e JavaScript puro (sem frameworks).
+- Interface responsiva com HTML5, CSS3 e JavaScript puro.
 
 ## 🧠 Objetivo
 
